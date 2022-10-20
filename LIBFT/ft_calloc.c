@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmunoz-f <lmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 15:31:26 by lmunoz-f          #+#    #+#             */
-/*   Updated: 2022/10/20 15:33:41 by lmunoz-f         ###   ########.fr       */
+/*   Created: 2022/10/17 13:25:53 by lmunoz-f          #+#    #+#             */
+/*   Updated: 2022/10/17 17:09:18 by lmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
-{
+void	*ft_calloc(size_t count, size_t size)
+	{
+	size_t	num;
 	size_t	i;
-	char	*dst1;
-	char	*src1;
+	char	*p;
+	char	*p1;
 
-	i = len;
-	if (dst1 > src1)
-	{
-		while (i > 0)
-		{
-			dst1[len] = src1[len];
-			len--;
-		}
-	}
 	i = 0;
-	if (dst1 < src1)
+	num = count * size;
+	if ((p = p1 = malloc(num)) != NULL)
 	{
-		while (i < len)
-		{
-			dst1[i] = src1[i];
-			i++;
-		}
+		i++;
+		*p++ = 0;
 	}
-	return (dst);
-}
+	return (p1);
+	}

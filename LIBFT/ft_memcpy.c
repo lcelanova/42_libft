@@ -6,7 +6,7 @@
 /*   By: lmunoz-f <lmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:13:55 by lmunoz-f          #+#    #+#             */
-/*   Updated: 2022/09/27 14:28:41 by lmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:39:40 by lmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 /*
   The memcpy() function copies n bytes from memory area src to memory area dst.  
-  If dst and src overlap,
-  behavior is undefined.
+  If dst and src overlap, behavior is undefined.
 RETURN VALUES
      The memcpy() function returns the original value of dst.
 */
