@@ -6,7 +6,7 @@
 /*   By: lmunoz-f <lmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 19:15:34 by laura             #+#    #+#             */
-/*   Updated: 2022/10/16 22:32:45 by lmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/10/21 09:18:40 by lmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return (result * minus);
+	return ((long)(result * minus));
 }

@@ -6,7 +6,7 @@
 /*   By: lmunoz-f <lmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:17:51 by lmunoz-f          #+#    #+#             */
-/*   Updated: 2022/10/20 16:18:50 by lmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:54:40 by lmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ret;
-
 	if (!s)
 		return (0);
 	if (ft_strlen(s) < start)
@@ -29,11 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ret);
 }
 
-int main (void)
-{
-	char *s1 = ft_substr("hello this is a string", 2, 10);
-	printf("%s\n", s1);
-}
 /*
 Parámetros s: La string desde la que crear la substring.
 
