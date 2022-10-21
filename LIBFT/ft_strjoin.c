@@ -6,7 +6,7 @@
 /*   By: lmunoz-f <lmunoz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 09:19:31 by lmunoz-f          #+#    #+#             */
-/*   Updated: 2022/10/21 12:35:07 by lmunoz-f         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:38:59 by lmunoz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,27 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
-	int		len1;
-	int		len2;
+	int		s1len;
+	int		s2len;
 	char	*str;
 
 	if (s1 && s2)
 	{
-		len1 = strlen(s1);
-		len2 = strlen(s2);
-		str = (char *) malloc(sizeof (char) * (len1 + len2 + 1));
+		s1len = strlen(s1);
+		s2len = strlen(s2);
+		str = (char *) malloc(sizeof (char) * (s1len + s2len + 1));
 		if (str == 0)
 			return (0);
-		i = 0;
-		while (s1[i])
-		{
+		i = -1;
+		while (s1[++i])
 			str[i] = s1[i];
-			i++;
-		}
-		i = 0;
-		while (s2[i])
+		i = -1;
+		while (s2[++i])
 		{
-			str[len1] = s2[i];
-			len1++;
-			i++;
+			str[s1len] = s2[i];
+			s1len++;
 		}
-		str[len1] = '\0';
+		str[s1len] = '\0';
 		return (str);
 	}
 	return (0);
